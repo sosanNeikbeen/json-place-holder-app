@@ -7,8 +7,8 @@ const randomBytes = promisify(crypto.randomBytes);
 
 dotenv.config();
 
-const region = "eu-central-1";
-const bucketName = "mybucketforvideos";
+const region = process.env.S3_REGION;
+const bucketName = process.env.BUCKET_NAME;
 const accessKeyId = process.env.AWS_ACCESS_KEY_ID;
 const secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY;
 
